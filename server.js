@@ -13,9 +13,10 @@ server.use(express.static(path.join(__dirname, './'), { maxAge: '30 days' }));
 server.use(cors());
 
 // Albums & Player
-// server.get('/artists/albums/:artistID', (req, res) => {
-//   res.redirect('http://52.15.129.193' + req.url);
-// });
+server.get('/artists/albums/:artistID', (req, res) => {
+  // res.redirect('http://52.15.129.193' + req.url);
+  res.redirect('http://18.188.226.149:3001/artists/albums/${req.params.artistID}');
+});
 
 // Related Artists
 server.get('/artist/:id/relatedArtists', (req, res) => {
@@ -25,9 +26,10 @@ server.get('/artist/:id/relatedArtists', (req, res) => {
 });
 
 // Popular Songs
-// server.get('/artist/:id', (req, res) => {
-//   res.redirect('http://18.224.17.253' + req.url);
-// });
+server.get('/artist/:id', (req, res) => {
+  // res.redirect('http://18.224.17.253' + req.url);
+  res.redirect('http://54.153.3.96:3004/artists/:id')
+});
 
 // Header
 // server.get('/artists/:artistID', (req, res) => {
