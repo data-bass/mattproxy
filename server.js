@@ -32,8 +32,9 @@ server.get('/artist/:id', (req, res) => {
 });
 
 // Header
-// server.get('/artists/:artistID', (req, res) => {
-//    res.redirect('http://35.172.133.115' + req.url);
-// });
+server.get('/artists/:artistID', (req, res) => {
+   // res.redirect('http://35.172.133.115' + req.url);
+   res.redirect('http://13.56.80.227:3003/artists/:id');
+});
 
 server.listen(3000, console.log('Listening on:', 3000));
