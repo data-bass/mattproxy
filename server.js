@@ -22,7 +22,7 @@ server.get('/artists/albums/:artistID', (req, res) => {
 server.get('/artist/:id/relatedArtists', (req, res) => {
   // res.redirect('http://18.206.245.56' + req.url);
   // res.redirect(`http://localhost:3002/artist/${req.params.id}/relatedArtists`);
-  res.redirect(`http://18.222.194.219:3002/artist/${req.params.id}/relatedArtists`);
+  res.redirect(`http://18.223.162.121/artist/${req.params.id}/relatedArtists`);
 });
 
 // Popular Songs
@@ -34,7 +34,7 @@ server.get('/artist/:id', (req, res) => {
 // Header
 server.get('/artists/:artistID', (req, res) => {
    // res.redirect('http://35.172.133.115' + req.url);
-   res.redirect('http://13.56.80.227:3003/artists/:id');
+   res.redirect('http://54.67.58.69/artists/header/:id');
 });
 
 server.listen(3000, console.log('Listening on:', 3000));
